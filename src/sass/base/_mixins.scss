@@ -1,0 +1,10 @@
+@mixin divide {
+    &:after {
+        content: '';
+        display: block;
+        margin: 25px auto 21px auto;
+        width: 150px;
+        height: 1px;
+        background-color: $main-color;
+    }
+}

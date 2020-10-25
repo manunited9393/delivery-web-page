@@ -1,0 +1,100 @@
+.reviews {
+    padding: 32px 0px 55px 0px;
+    &__container {
+        position: relative;
+    }
+    &__tiny-slider {
+        margin-top: 25px;
+        position: relative;
+    }
+    &__title {
+        @include divide;
+    }
+    &__descr {
+        margin: 0 auto;
+        width: 765px;
+        font-size: 21px;
+        font-weight: 300;
+    }
+    &__slide {
+        position: relative;
+        // padding-top: 20px;
+        margin-top: 30px;
+        display: none;
+        // opacity: .3;
+    }
+    &__slide-img {
+        display: flex;
+        justify-content: center;
+        img {
+            // width: 70px;
+        }
+    }
+    &__slide-title {
+        margin-top: 15px;
+        text-transform: none;
+        font-size: 18px;
+    }
+    &__slide-descr {
+        margin-top: 13px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #3a3a3a;
+    }
+}
+
+.arrows {
+    &__left {
+        width: 50px;
+        height: 50px;
+        background: url('../icons/arrow-left.png') center center no-repeat;
+        border: none;
+        position: absolute;
+        left: 450px;
+        top: 80px;
+        cursor: pointer;
+    }
+    &__right {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        background: url('../icons/arrow-right.png') center center no-repeat;
+        border: none;
+        position: absolute;
+        right: 450px;
+        top: 80px;
+        cursor: pointer;
+    }
+    @media (max-width: 1200px) {
+        &__left {
+            left: 370px;
+        }
+        &__right {
+            right: 370px;
+        }
+    }
+    @media (max-width: 993px) {
+        &__left {
+            left: 250px;
+        }
+        &__right {
+            right: 250px;
+        }
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.dots {
+    margin: 15px auto 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    &__dot {
+        width: 5px;
+        height: 5px;
+        background-color: $main-color;
+        border-radius: 100%;
+    }
+}

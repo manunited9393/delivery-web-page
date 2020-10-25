@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        &__descr {
+            width: 95%;
+        }
+        &__slide-descr {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .reviews {
+        &__descr {
+            width: 100%;
+            font-size: 19px;
+        }
+    }
+}

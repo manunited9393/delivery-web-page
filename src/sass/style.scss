@@ -1,0 +1,89 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    :active, :hover, :focus {
+        outline: 0!important;
+        outline-offset: 0!important;
+    }
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+// базовые классы не относящиесяе к опреденному блоку
+
+// подложка для закрытия форм после клина по ней
+.invisible-wrapper {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(255, 255, 255, 0);
+    @media (max-width: 767px) {
+        z-index: 0;
+    }
+}
+
+
+
+@import '../../node_modules/tiny-slider/src/tiny-slider.scss';
+
+
+
+
+// base
+@import "libs/bootstrap-reboot.min.scss";
+@import "base/variables";
+@import "base/mixins";
+
+// blocks
+@import "blocks/title";
+
+
+@import "blocks/header";
+@import "blocks/advantages";
+@import "blocks/about";
+@import "blocks/agent";
+@import "blocks/prices";
+@import "blocks/managers";
+@import "blocks/schemes";
+@import "blocks/reviews";
+@import "blocks/contacts";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/policy";
+
+
+// media
+@import "media/media";
+@import "media/header-media";
+@import "media/buttons-media";
+@import "media/title-media";
+@import "media/advantages-media";
+@import "media/about-media";
+@import "media/agent&managers-media";
+@import "media/prices-media";
+@import "media/schemes-media";
+@import "media/reviews-media";
+@import "media/contacts-media";
+@import "media/map-media";
+@import "media/footer-media";
+
+@import "blocks/buttons";
+
+
+
+
+
+
+

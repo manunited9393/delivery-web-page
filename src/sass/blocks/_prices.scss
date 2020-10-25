@@ -1,0 +1,161 @@
+.prices {
+    padding: 32px 0px 55px 0px;
+    &__title {
+        @include divide;
+    }
+    &__descr {
+        margin: 0 auto;
+        width: 695px;
+        font-size: 21px;
+        font-weight: 300;
+    }
+    &__cards {
+        margin-top: 33px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        position: relative;
+        overflow: hidden;;
+    }
+    &__card {
+        padding: 2px 2px 25px 2px;
+        border: 1px solid rgba(0, 0, 0, 0.151);
+        span {
+            font-size: 14px;
+        }
+    }
+    &__card-title {
+        padding: 23px 0px;
+        background-color: #000;
+    }
+    &__card-icon {
+        margin: 15px 0;
+    }
+    &__card-price {
+        font-size: 28px;
+        color: $main-color;
+    }
+    &__card-descr {
+        margin-top: 20px;
+        padding: 0 20px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    &__btn {
+        margin-top: 25px;
+    }
+}
+.consulting {
+    margin-top: 55px;
+    &__title {
+        font-size: 28px;
+        color: #3a3a3a;
+    }
+    &__form {
+        margin-top: 72px;
+        padding: 65px 0 55px 0;
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.199);
+        display: grid;
+        grid-template-columns: repeat(3, 270px);
+        justify-content: center;
+        column-gap: 4px;
+    }
+    &__input {
+        padding: 16px 25px;
+        border: 1px solid rgba(0, 0, 0, 0.199);
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    &__icon {
+        width: 120px;
+        height: 100px;
+        padding: 0 10px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        img {
+            width: 100%;
+        }
+    }
+    &__btn {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        position: absolute;
+        top: auto;
+        bottom: -52px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 15px;
+            background-color: rgb(255, 255, 255);
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 15px;
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}
+
+
+.card-info {
+    padding: 4px 4px 15px 2px;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    transition: .5s all;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    overflow: auto;
+    &_active {
+        top: 0;
+    }
+    &__title {
+        padding: 23px 0px;
+        background-color: #000;
+        color: #fff;
+    }
+    &__descr {
+        padding: 10px 20px;
+    }
+    &__close {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-radius: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .4s all;
+        margin-top: auto;
+        margin-bottom: 15px;
+        align-self: center;
+        &:hover {
+            transform: rotate(90deg) scale(1.2);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

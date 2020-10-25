@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+    .agent {
+        padding: 45px 0 50px 0;
+        &__descr {
+            width: 90%;
+        }
+    }
+    .managers {
+        padding: 45px 0 50px 0;
+        &__descr {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 576px) {
+    .agent {
+        &__descr {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}
