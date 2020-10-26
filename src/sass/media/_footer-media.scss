@@ -36,38 +36,6 @@
             grid-row: 1 / 3;
         }
     }
-
-    .request {
-        left: 0;
-        right: 0;
-        top: auto;
-        bottom: 0;
-        height: 100vh;
-        background-color: rgba(52, 46, 46, 0.605);
-        z-index: -1;
-        &_active {
-            z-index: 1;
-        }
-        &:after {
-            display: none;
-        }
-        &__form {
-            position: absolute;
-            top: 30%;
-            background-color: #fff;
-            width: 70%;
-            left: 50%;
-            transform: translateX(-50%);
-            input {
-                padding-top: 17px;
-                padding-bottom: 17px;
-                font-size: 16px;
-            }
-            img {
-                width: 30px;
-            }
-        }
-    }
     
 }
 
@@ -92,10 +60,9 @@
             }
         }
         &__btn {
-            display: none;
             padding: 16px 20px!important;
             grid-column: 1 / 3;
-            width: 60%;
+            width: 50%;
             font-size: 11px!important;
         }
         &__bottom {
@@ -112,12 +79,12 @@
             grid-row: 2 / 3;
         }
     }
-
-    .request {
-        display: none;
-        &__form {
-            width: 90%;
+    
+}
+@media (max-width: 350px) {
+    .footer {
+        &__btn {
+            width: 70%;
         }
     }
-    
 }

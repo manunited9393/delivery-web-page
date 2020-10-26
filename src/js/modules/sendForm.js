@@ -13,9 +13,7 @@ function sendForm() {
                 data: $(this).serialize()
             }).done(function() {
                 $(this).find("input").val("");
-                $('.request').removeClass('request_active');
-                $('.wrap').removeClass('invisible-wrapper');
-                $('form').trigger('reset');
+                
                 alert('Заявка успешно оставлена');
             });
         } else {

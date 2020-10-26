@@ -8,8 +8,8 @@ import goToLink from './modules/toLink';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    hamburger();
-    callMe();
+    hamburger('.hamburger', '.header__menu', '.header__menu-item a', '.wrap');
+    callMe('.btn-trigger-call', '.popup', '.close-icon', '.wrap');
     sendForm();
     moreInfo();
     goToLink();

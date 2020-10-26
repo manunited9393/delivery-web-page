@@ -4,18 +4,6 @@
 .main {
     padding: 20px 0px 80px 0px;
     background: url('../images/main/background.jpg') center center/cover no-repeat;
-    &__overlay {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(255, 255, 255, 0.646);
-        transition: .6s all;
-    }
-    &__overflow {
-        overflow: hidden;
-    }
     &__margim-right {
         margin-right: 0;
         &_active {
@@ -33,8 +21,6 @@
     }
     &__title {
         color: $main-color
-    }
-    &__subtitle {
     }
     &__devide {
         margin-top: 40px;
@@ -60,8 +46,6 @@
         grid-template-columns: repeat(4, 1fr);
         column-gap: 30px;
     }
-    &__item {
-    }
     &__item-icon {
         margin: 0 auto;
         max-width: 60px;
@@ -71,12 +55,6 @@
             height: 100%;
             object-fit: cover;
         }
-    }
-    &__item-descr {
-        margin-top: 15px;
-    }
-    &__btn {
-        margin-top: 40px;
     }
 }
 .header {

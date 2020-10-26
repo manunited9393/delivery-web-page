@@ -1,57 +1,50 @@
-function callMe() {
-    const btnCall = document.querySelectorAll('.btn-trigger-call'),
-        windowCall = document.querySelectorAll('.request'),
-        wrap = document.querySelector('.wrap'),
-        requestWrap = document.querySelectorAll('.request'),
-        closeForm = document.querySelector('.close-icon');
+function callMe(triggerSelectors, windowPopupSelectors, closeSelectors, wrap) {
+    const btnCall = document.querySelectorAll(triggerSelectors),
+        windowCall = document.querySelectorAll(windowPopupSelectors),
+        closeFormBtn = document.querySelectorAll(closeSelectors),
+        wrapper = document.querySelector(wrap);
 
     btnCall.forEach((btn, i) => {
         btn.addEventListener('click', () => {
+            windowCall[i].classList.toggle('popup_active');
+            wrapper.classList.toggle('wrap_active');
 
             if (window.getComputedStyle(windowCall[i]).opacity == '0') {
-                windowCall[i].classList.add('request_active');
-                wrap.classList.add('invisible-wrapper');
+                windowCall[i].classList.add('popup_active');
             } else {
-                windowCall[i].classList.remove('request_active');
+                windowCall[i].classList.remove('popup_active');
             }
         });
     });
 
-    wrap.addEventListener('click', () => {
-        wrap.classList.remove('invisible-wrapper');
-        windowCall.forEach(item => {
-            item.classList.remove('request_active');
-        });
-    });
+    function closeForm(triggersClose, popupSelectors) {
+        const closeButtons = document.querySelectorAll(triggersClose),
+              popups = document.querySelectorAll(popupSelectors);
 
-    // requestWrap.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         item.classList.remove('request_active');
-    //         wrap.classList.remove('invisible-wrapper');
-    //         windowCall.forEach(item => {
-    //             item.classList.remove('request_active');
-    //         });
-    //     });
-    // });
+        closeButtons.forEach(item => {
+            item.addEventListener('click', () => {
+                popups.forEach(popup => {
+                    popup.classList.remove('popup_active');
+                });
+                wrapper.classList.remove('wrap_active');
+                wrapper.classList.remove('wrap_active-white');
+            });
+        });
+    }
+
+    closeForm('.wrap', '.popup');
+    closeForm('.popup__icon', '.popup');
+
+
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 500 && window.pageYOffset < sum) {
             windowCall.forEach(item => {
-                item.classList.remove('request_active');
-                wrap.classList.remove('invisible-wrapper');
+                item.classList.remove('popup_active');
             });
         }
     });
 
-    closeForm.addEventListener('click', () => {
-        requestWrap.forEach(item => {
-            item.classList.remove('request_active');
-            wrap.classList.remove('invisible-wrapper');
-            windowCall.forEach(item => {
-                item.classList.remove('request_active');
-            });
-        });
-    });
 
     function height() {
         let scrollHeight = Math.max(
@@ -62,17 +55,6 @@ function callMe() {
         return scrollHeight - 1000;
     }
     let sum = height();
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

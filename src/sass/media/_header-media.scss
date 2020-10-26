@@ -92,11 +92,12 @@
             &:hover {
                 a {
                     color: #232323;
-                    border-bottom: 1px solid #232323;
+                    border: none;
                 }
             }
             a {
                 font-size: 20px;
+                display: block;
             }
         }
         &__help {
